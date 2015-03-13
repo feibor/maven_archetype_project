@@ -1,0 +1,4 @@
+#Fri Mar 13 13:21:39 GMT+08:00 2015
+eclipse.preferences.version=1
+validator.Checked=src/main/webapp/bower_components,src/main/webapp/js,src/main/webapp/charisma
+validator.Unchecked=

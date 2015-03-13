@@ -1,0 +1,27 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE HTML>
+<html>
+<head>
+<base href="<%=request.getContextPath()%>" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>require.js</title>
+<!--css -->
+<link type="text/css" href="../css/select_demo.css" rel="stylesheet">
+
+
+<!--javascript -->
+<!-- async属性表明这个文件需要异步加载，避免网页失去响应。IE不支持这个属性，只支持defer，所以把defer也写上。</script> -->
+	<script src="../requirejs-2.1.14.js" data-main="../_src/main.js"></script>
+</head>
+<body>
+	
+	<div class="test" id="test">
+	</div>
+</body>
+<script type="text/javascript">
+
+// 	alert(select.defaultValue);
+</script>
+</html>

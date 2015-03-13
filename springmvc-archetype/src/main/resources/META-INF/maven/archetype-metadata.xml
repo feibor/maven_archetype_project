@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="ipreziProject-admin"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fileSets>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/webapp</directory>
+      <includes>
+        <include>**/*.vm</include>
+        <include>**/*.jsp</include>
+        <include>**/*.xml</include>
+        <include>**/*.html</include>
+        <include>**/*.properties</include>
+        <include>**/*.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/main/webapp</directory>
+      <includes>
+        <include>**/*.</include>
+        <include>**/*.woff</include>
+        <include>**/*.pdf</include>
+        <include>**/*.js</include>
+        <include>**/*.ico</include>
+        <include>**/*.tab</include>
+        <include>**/*.te</include>
+        <include>**/*.orig</include>
+        <include>**/*.swf</include>
+        <include>**/*.eot</include>
+        <include>**/*.psd</include>
+        <include>**/*.MF</include>
+        <include>**/*.md</include>
+        <include>**/*.json</include>
+        <include>**/*.jar</include>
+        <include>**/*.php</include>
+        <include>**/*.map</include>
+        <include>**/*.config</include>
+        <include>**/*.less</include>
+        <include>**/*.yml</include>
+        <include>**/*.woff2</include>
+        <include>**/*.svg</include>
+        <include>**/*.ttf</include>
+        <include>**/*.coffee</include>
+        <include>**/*.class</include>
+        <include>**/*.sh</include>
+        <include>**/*.jpg</include>
+        <include>**/*.ai</include>
+        <include>**/*.sql</include>
+        <include>**/*.png</include>
+        <include>**/*.gitignore</include>
+        <include>**/*.css</include>
+        <include>**/*.gif</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.settings</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>.externalToolBuilders</directory>
+      <includes>
+        <include>**/*.launch</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>.settings</directory>
+      <includes>
+        <include>**/*.prefs</include>
+        <include>**/*.component</include>
+        <include>**/*.container</include>
+        <include>**/*.name</include>
+        <include>**/*.jsdtscope</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.classpath</include>
+        <include>.project</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.mymetadata</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>

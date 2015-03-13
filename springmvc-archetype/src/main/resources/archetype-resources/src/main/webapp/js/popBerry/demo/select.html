@@ -1,0 +1,33 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>选择框的demo</title>
+<!--css -->
+<link type="text/css" href="../css/select_demo.css" rel="stylesheet">
+
+
+<!--javascript -->
+<script src="../jquery-1.9.1.min.js"></script>
+<script src="../component_config.js"></script>
+<script src="../_src/component_js.js"></script>
+<script src="../_src/com_select.js"></script>
+<!-- <script src="../component_api.js"></script> -->
+
+
+</head>
+<body>
+	<div class="test" id="test">
+	</div>
+</body>
+<script type="text/javascript">
+	var jsonData=[{"name":"吴昊","id":"1"},{"name":"吴昊2","id":"3"},{"name":"吴昊3","id":"4"},{"name":"李鹏飞","id":"2"}];
+ 	var select = COMPONENT.select.init("test",jsonData);
+ 	select.selectAnimation="clone";
+ 	select.assemble();
+// 	alert(select.defaultValue);
+</script>
+</html>

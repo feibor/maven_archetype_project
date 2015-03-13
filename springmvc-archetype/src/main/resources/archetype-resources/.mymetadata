@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ipreziProject(admin)"
+  id="myeclipse.1426223268612"
+  context-root="/ipreziProject-admin"
+  j2ee-spec="6.0"
+  archive="ipreziProject(admin).war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

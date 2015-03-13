@@ -1,0 +1,48 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>选择框的demo</title>
+    <!--css -->
+    <link type="text/css" href="../css/select_demo.css" rel="stylesheet">
+
+    <!--javascript -->
+    <script src="../jquery-1.9.1.min.js"></script>
+    <script src="../_src/popArry-select-1.0.js"></script>
+    <!-- <script src="../component_api.js"></script> -->
+
+</head>
+<body>
+    <div class="test" id="test"></div>
+</body>
+<script type="text/javascript">
+	
+	var select = new popArry.select();
+	
+	 select.create({
+	 			init:{
+					containerId : "test"
+	 			},
+	 			procedure:{
+// 	 				createFrame:test
+	 			}
+	});
+	 select.AddToRightListeners.push(function () {
+	     alert("动作1")
+	 });
+	 select.AddToRightListeners.push(function () {
+	     alert("动作2")
+	 });
+	 select.AddToRightListeners.push(function () {
+	     alert("动作N")
+	 });
+	function test(){
+			alert("test");
+	};
+	
+	// 	alert(select.defaultValue);
+</script>
+</html>

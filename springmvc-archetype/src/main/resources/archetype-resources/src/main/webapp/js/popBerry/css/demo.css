@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+/*
+
+*/
+
+body{
+	text-align: center;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.content{
+	width:100%;
+	height:800px;
+}
+
+.canvas{
+	background: black;
+	margin: 30px;
+}

@@ -1,0 +1,82 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	   	http://www.springframework.org/schema/aop
+	   	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<!-- 注解探测器 --> 
+	<context:component-scan base-package="${package}.web.controller" />
+
+	<!-- 加载Velocity属性文件和资源路径. -->
+	<bean id="velocityConfig"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="/views/" />
+		<property name="configLocation" value="classpath:velocity/velocity.properties" />
+	</bean>
+
+	<!-- Velocity视图解析器 -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+		<property name="prefix" value="" />
+		<property name="suffix" value=".html" />
+		<!-- Whether we should cache views, once resolved -->
+		<property name="cache" value="false" />
+		<property name="contentType" value="text/html;charset=utf-8" />
+		<!-- 暴露Spring本身的宏 -->
+		<property name="exposeSpringMacroHelpers" value="true" />
+
+		<!-- 格式化日期 :${symbol_dollar}dateTool.format("yyyy-MM-dd",${symbol_dollar}!{}) -->
+		<property name="dateToolAttribute" value="dateTool" />
+		<!-- 格式化数字 : -->
+		<property name="numberToolAttribute" value="numberTool" />
+		<property name="toolboxConfigLocation" value="/WEB-INF/classes/velocity/toolbox.xml" />
+	</bean>
+
+	<!-- springmvc国际化配置 -->
+	<!-- 资源文件绑定器 -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>i18n/messages</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 国际化操作 拦截器 -->
+	<!-- 基于Session的国际化配置 -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
+		
+<!-- 	<mvc:interceptors> -->
+<!-- 		<bean id="localeChangeInterceptor" -->
+<!-- 			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"> -->
+<!-- 			<property name="paramName" value="lang" /> -->
+<!-- 		</bean> -->
+<!-- 		<mvc:interceptor> -->
+<!-- 			<mvc:mapping path="/views/admin/**" /> -->
+			<!-- 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 -->
+<!-- 			<bean class="com.cloudwinker.source.admin.interceptor.AuthInterceptor" /> -->
+<!-- 		</mvc:interceptor> -->
+<!-- 	</mvc:interceptors> -->
+
+	<mvc:default-servlet-handler />
+	<context:annotation-config />
+	<mvc:annotation-driven />
+	<!-- <aop:aspectj-autoproxy proxy-target-class="true"/> <bean class="com.hc360.msm.core.aspect.LogAspect"/> -->
+
+
+
+
+</beans>

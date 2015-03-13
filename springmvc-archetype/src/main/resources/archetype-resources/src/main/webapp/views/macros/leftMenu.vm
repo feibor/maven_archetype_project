@@ -1,0 +1,48 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+${symbol_pound}**
+ * springMessage的扩展，为了使得spring的国际化能够在sitemesh的方式中也可以使用
+ *
+ * Macro to translate a message code into a message.
+ *
+ *${symbol_pound}
+${symbol_pound}macro(leftMenu)
+<!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">作品管理</li>
+                        <li><a class="ajax-link" href="blank.html"><i class="glyphicon glyphicon-th"></i><span> 作品列表</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="＃"><i
+                                    class="glyphicon glyphicon-filter"></i><span>评论审核管理</span></a></li>
+                                    
+                        <li><a class="ajax-link" href="${symbol_pound}"><i
+                                    class="glyphicon glyphicon-tags"></i><span> 标签列表</span></a></li>
+                        
+                        <li class="nav-header hidden-md">会员管理</li>
+                        <li><a class="ajax-link" href="table.html"><i
+                                    class="glyphicon glyphicon-th-list"></i><span>会员列表</span></a></li>
+
+                        <li><a class="ajax-link" href="table.html"><i
+                                    class="glyphicon glyphicon-leaf"></i><span>提现记录列表</span></a></li>
+                                    
+                        <li class="nav-header hidden-md">系统管理</li>
+                        <li><a class="ajax-link" href="table.html"><i
+                                    class="glyphicon glyphicon-lock"></i><span>系统用户列表</span></a></li>
+                        <li><a class="ajax-link" href="table.html"><i
+                                    class="glyphicon glyphicon-certificate"></i><span>系统日志</span></a></li>
+						<li><a class="ajax-link" href="table.html"><i
+                                    class="glyphicon glyphicon-tasks"></i><span>系统字典管理</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+${symbol_pound}end
